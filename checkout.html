@@ -2,48 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Adopt A Dog</title>
-    <style>
-      img{
-        width: 20em;
-      }
-      .logo{
-        width: 25%;
-      }
-      .cart{
-        width: 1.5rem;
-      }
-      header {
-        background-image: url("images/header-image.jpg");
-        box-sizing: border-box;
-        color: white;
-        font-weight: bold;
-        padding-left: 5em;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-      }
-      footer {
-        background: #003399;
-        box-sizing: border-box;
-        color: white;
-        font-weight: bold;
-        padding-left: 5em;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-      }
-    </style>
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
   </head>
 
   <body>
-    <header>
-      <img class="logo" src="images/adoptadog-logo.svg" alt="company logo"/>
-      <h2 class="italic">Seattle's Premier dog adoption agency</h2>
+    <header class="container">
       <section>
-        <img class="cart" src="images/cart-icon.svg" alt="shopping cart"/>
-        <p>$123.45</p>
-        <a href="#">Checkout</a>
+        <img class="logo" src="images/adoptadog-logo.svg" alt="company logo"/>
+        <h2 class="title">Seattle's Premier dog adoption agency</h2>
       </section>
-
+      <section class="container down">
+        <article class="cart">
+          <p class="cart">
+            <img class="cart" src="images/cart-icon.svg" alt="shopping cart"/>
+            $1234.56</p>
+        </article>
+        <a class="cart" href="checkout.html">Checkout</a>
+      </section>
     </header>
 
     <article>
@@ -51,80 +27,96 @@
         <ul>
           <li><a href="index.html">Home</a> /
           </li>
-          <li><a href="#">Dogs</a> /
+          <li><a href="dogs.html">Dogs</a> /
           </li>
-          <li><a href="#">Blog</a> /
+          <li><a href="blog.html">Blog</a> /
           </li>
         </ul>
       </nav>
     </article>
 
-    <article>
-      <h1>Checkout
-      </h1>
-    </article>
-
-    <form method="get">
-      <label>Name:
-        <input type="text" name="contactName">
-      </label>
-      <label>Email Address:
-        <input type="email" name="contactEmail">
-      </label>
-      <label>Street Address:
-        <input type="tel" name="contactPhone">
-      </label>
-      <label for="city">City:</label>
-        <input id="city" type="text" name="adopterCity">
-
-      <label>State
-        <select name="state">
-          <option value="">Select your state</option>
-          <option value="ST">State</option>
-        </select>
-      </label>
-      <label for="zip">Zip Code?</label>
-        <input id="zip" type="number" name="zipCode">
-
-      <input type="submit" value="Submit">
-
-      <fieldset>
-        <legend>Firt Time Adopter?</legend>
-        <label>
-          <input type="radio" name="special" value="yes">
-          Yes
+    <section class="checkout">
+      <article>
+        <h1>Checkout
+        </h1>
+      </article>
+      <form method="get">
+        <label>Name
+          <input type="text" name="contactName">
         </label>
-        <label>
-          <input type="radio" name="special" value="no">
-          No
+        <label>Email Address
+          <input type="email" name="contactEmail">
         </label>
-      </fieldset>
+        <label for="address">Street Address
+          <input id="address" name="streetAddress">
+        </label>
+        <section class="container location">
+          <div class="city">
+            <label for="city">City</label>
+            <input id="city" type="text" name="adopterCity">
+          </div>
+          <div class="state">
+            <label>State
+              <select name="state">
+                <option value=" ">_</option>
+                <option value="ST">State</option>
+              </select>
+            </label>
+          </div>
+          <div class="zip">
+            <label for="zip">Zip Code</label>
+              <input id="zip" type="number" name="zipCode">
+          </div>
 
-      <label>Pickup Location
-        <select name="location">
-          <option value="">Select your location</option>
-          <option value="locationXX">Location</option>
-        </select>
-      </label>
-      <section>
-        <h3>Dogs Adopted</h3>
-        <ul>
-          <li>
-            <img class="adoptees" src="images/lucas-card.jpg" alt="lucas, looking happy with black fur">
-            <h2>Lucas</h2>
-            <h3>Cost to Adopt: $123.45</h3>
-          </li>
-          <li>
-            <img class="adoptees" src="images/duffy-card.jpg" alt="Duffy, young pitpul white and brown fur">
-            <h2>Murphy</h2>
-            <h3>Cost to Adopt: $123.45</h3>
-          </li>
-        </ul>
-        <h3>Total Adoption Cost</h3>
-        <p>$1234.56</p>
-      </section>
-      <input type="submit" value="Submit">
-    </form>
+        </section>
+
+        <fieldset class="container">
+          <legend>First Time Adopter?</legend>
+          <div class="container radio">
+            <div class="container">
+              <input class="radio" type="radio" name="special" value="yes">
+              <label class="radio">Yes</label>
+            </div>
+            <div class="container">
+              <input class="radio" type="radio" name="special" value="no">
+              <label class="radio">No</label>
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <label>Pickup Location
+          <select class="location" name="location">
+            <option value="">_</option>
+            <option value="locationXX">Location</option>
+          </select>
+        </label>
+        <H2>Dogs Adopted</H2>
+        <section class="container adoptees">
+
+            <div class="container padded">
+              <img class="adoptees" src="images/lucas-checkout.jpg" alt="lucas, looking happy with black fur">
+              <div>
+                <h3 class="checkout">Lucas</h3>
+                <p class="checkout"><strong>Cost to Adopt:</strong> $123.45</p>
+              </div>
+            </div>
+            <div class="container">
+              <img class="adoptees" src="images/duffy-checkout.jpg" alt="Duffy, young pitpul white and brown fur">
+              <div>
+                <h3 class="checkout">Duffy</h3>
+                <p class="checkout"><strong>Cost to Adopt:</strong> $123.45</p>
+              </div>
+            </div>
+        </section>
+        <h2>Total Adoption Cost</h2>
+        <h3>Cost to Adopt: $123.45</h3>
+        <input class="submit button" type="submit" value="Submit">
+      </form>
+    </section>
+
+
 
     <footer>
         <img src="images/adoptadog-logo.svg" alt="company logo"/>
@@ -133,8 +125,8 @@
         <p>esseque invenienihil imaximu scideru ptistiusam consequunt
         </p>
 
-        <nav>
-          <ul>
+        <nav class="footer">
+          <ul class="footer">
             <li><a href="index.html">Home</a> /
             </li>
             <li><a href="#">Dogs</a> /
