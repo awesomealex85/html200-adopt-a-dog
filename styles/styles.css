@@ -280,7 +280,7 @@ h2.title {
     height: 20em;
     overflow: hidden;
   }
-  article.intro, div.blog, nav.head {
+  article.intro, div.blogpre, nav.head {
     text-align: center;
     display: block;
   }
@@ -377,7 +377,7 @@ h2.title {
   div.wrap{
     position: relative;
   }
-  div.blog{
+  div.blogpre{
     position: absolute;
     right: 0;
     top: -3rem;
