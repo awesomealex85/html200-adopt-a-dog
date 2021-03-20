@@ -7,7 +7,7 @@
   width: 24rem;
 }
 header {
-  background: linear-gradient(to top, purple, brown);
+  background: linear-gradient(to top, purple, white);
   background-image: url("../images/header-image.jpg");
   box-sizing: border-box;
   color: green;
